@@ -12,7 +12,7 @@ export function clickLanguageButton(){
 export function checkLogoVisibitly(){
    return cy.get(mosaferLocators.logoVisibilty).should('be.visible');
 }
-////////////////////////////////////////////////////////////////////////////
+
 export function signInValidation(){
    return cy.get(mosaferLocators.signInButton).should('be.visible').should('contain', 'Sign in');
 }
@@ -21,11 +21,6 @@ export function numberValidation(){
    return cy.get(mosaferLocators.retrieveMyBookingButton).should('be.visible').should('contain', 'Retrieve my booking');
 }
 
-// export function checkLogoVisibitly(){
-//    return cy.get(mosaferLocators.logoVisibilty).should('be.visible');
-// }
-
-///////////////////////////////////////////////////////////////////////////////
 export function inputRandomLocation() {
    let index = 0;
    index = Math.floor((Math.random() * 4));
@@ -40,7 +35,7 @@ export function inputRandomLocation() {
 
  export function chooseCheckInDate() {
    cy.get(mosaferLocators.startDatePicker).click();
-   cy.get(mosaferLocators.availableDates).any().click(); // choosing a 
+   cy.get(mosaferLocators.availableDates).any().click(); // choosing checkin date randomly
  }
 
  export function chooseCheckOutDate() {
@@ -50,10 +45,7 @@ export function inputRandomLocation() {
 
  export function selectReserveOption() {
    cy.wait(1000)
-   cy.get('[data-testid="HotelSearchBox__ReservationSelect_Select"]').select('1 Room, 1 Adult, 0 Children');
-   // cy.get(mosaferLocators.reserveBox).focus().click({force:true});
-   // cy.get(mosaferLocators.reserveOption).trigger('click');
-   // cy.pause();
+   cy.get(mosaferLocators.selectReserveOption).select('1 Room, 1 Adult, 0 Children');
  }
 
  export function makeSearch(){
@@ -67,9 +59,8 @@ export function inputRandomLocation() {
 export function cheapestPrice(){
    cy.get(mosaferLocators.lowestPriceFilter).click(); // click on lowest prices filter
    cy.wait(2000);
-
-
 }
+
 export function verifyFreeCancelationFilter(){
    cy.get(mosaferLocators.freeCancelationFilter).click({force:true});
    cy.get(mosaferLocators.freeCancelationBadge).should('contain', 'Free Cancellation'); // all elements hs this selectors should contain free cancellation
