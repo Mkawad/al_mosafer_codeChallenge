@@ -24,10 +24,9 @@ context('Seera code challenge', () => {
 
         it('Search for the best price ', () => {
             mosaferMethods.inputRandomLocation();
-            mosaferMethods.chooseCheckInDate();
-            mosaferMethods.chooseCheckOutDate();
+            mosaferMethods.reservationDates();
             mosaferMethods.selectReserveOption();
-            cy.wait(1000);
+            mosaferMethods.shortWait();
             mosaferMethods.makeSearch();
             mosaferMethods.waitPageLoad();
             mosaferMethods.cheapestPrice();

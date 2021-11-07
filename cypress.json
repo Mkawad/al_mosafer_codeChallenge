@@ -1,9 +1,5 @@
 {
   "baseUrl":"https://www.almosafer.com",
-  "env": {
-    "authToken": "9a198b03-d443-416a-b9f9-393a898f940d",
-    "kAuthToken": "34cb3152-b78c-4125-b8e0-1d754f58068a"
-},
   "defaultCommandTimeout": 30000,
   "reporter": "cypress-multi-reporters",
   "reporterOptions": {
@@ -19,6 +15,5 @@
       "mochaFile": "cypress/reports/junit/results-[hash].xml"
     }
   },
-  "video": false,
-  "pageLoadTimeout": 100000
+  "video": false
 }
