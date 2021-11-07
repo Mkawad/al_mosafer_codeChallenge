@@ -1,11 +1,9 @@
 import * as mosaferMethods from '../../cypress/pageObjects/pageMethods/methods/mosaferMethods';
-import 'cypress-wait-until';
 
 context('Seera code challenge', () => {
     describe('Al-Mosafer TCs', () => {
         before(() => {
             mosaferMethods.NavigateToUrl();
-            // cy.visit(''); // Will Navigate to the URL provided in cypress.json before starting with the test steps
         });
 
         it('Navigate to almosafer URL and verify elements', () => {

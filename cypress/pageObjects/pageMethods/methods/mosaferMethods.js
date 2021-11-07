@@ -6,7 +6,7 @@ const checkInDate = Cypress.dayjs().add(startDate, 'day').format('YYYY-MM-DD')
 const checkOutDate = Cypress.dayjs().add(endDate, 'day').format('YYYY-MM-DD');
 
 export function NavigateToUrl(){
-   cy.visit('');
+   cy.visit('');  // Will Navigate to the URL provided in cypress.json before starting with the test steps
 
 }
 
