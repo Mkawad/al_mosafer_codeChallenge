@@ -20,7 +20,7 @@ context('Seera code challenge', () => {
             mosaferMethods.numberValidation();
         });
 
-        it('Search for hotels with random dates ', () => {
+        it('Search for hotels with random date ', () => {
             mosaferMethods.inputRandomLocation();
             mosaferMethods.reservationDates();
             mosaferMethods.selectReserveOption();
@@ -28,7 +28,7 @@ context('Seera code challenge', () => {
             mosaferMethods.makeSearch();
         });
 
-        it('Verify elements in hotels detailed dates', () => {
+        it('filter for cheapest price and verify elements in detailed page', () => {
             mosaferMethods.shortWait();
             mosaferMethods.waitPageLoad();
             mosaferMethods.cheapestPrice();
