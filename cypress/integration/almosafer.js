@@ -20,19 +20,20 @@ context('Seera code challenge', () => {
             mosaferMethods.numberValidation();
         });
 
-        it('Search for the best price ', () => {
+        it('Search for hotels with random dates ', () => {
             mosaferMethods.inputRandomLocation();
             mosaferMethods.reservationDates();
             mosaferMethods.selectReserveOption();
             mosaferMethods.shortWait();
             mosaferMethods.makeSearch();
+        });
+
+        it('Verify elements in hotels detailed dates', () => {
+            mosaferMethods.shortWait();
             mosaferMethods.waitPageLoad();
             mosaferMethods.cheapestPrice();
             mosaferMethods.assertMinimumPriceEqualFirstFlight();
             mosaferMethods.verifyFreeCancelationFilter();
-                 
-
         });
-
     });
 });
